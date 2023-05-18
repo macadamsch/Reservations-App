@@ -3,7 +3,7 @@ import ReservationTable from "./reservationTable/ReservationTable";
 import { listReservations, listTables } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
 import { previous, next } from "../utils/date-time"
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 import TableList from "./TableList/TableList";
 
 /**

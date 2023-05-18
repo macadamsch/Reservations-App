@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 import ErrorAlert from "../layout/ErrorAlert";
 import Form from "./Form";
 import { createReservation } from "../utils/api";
-// import ReservationsList from "./ReservationsList";
+import { isNotTuesday } from "../utils/date-time";
+import { isNotPast } from "../utils/date-time";
 
-function Reservations() {
+export default function Reservations() {
     const history = useHistory;
     const [reservationsError, setReservationsError] = useState(null);
     const initialFormData = {
@@ -25,6 +26,11 @@ function Reservations() {
             [e.target.name]: e.target.value,
         });
     };
+
+    const findErrors = (date, errors) => {
+        isNotTuesday(date, errors);
+        isNotPast(date, errors);
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,13 +56,9 @@ function Reservations() {
         <section>
             <ErrorAlert error={reservationsError} />
             <Form
-            reservation={reservation}
             initialFormData={formData}
             handleFormChange={handleFormChange}
             handleSubmit={handleSubmit} />
-            <ReservationsList />
         </section>
     )
 }
-
-export default Reservations;
