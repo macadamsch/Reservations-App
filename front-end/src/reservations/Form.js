@@ -5,7 +5,7 @@ export default function Form({
     initialFormData, 
     handleFormChange, 
     handleSubmit 
-}){
+}) {
     const history = useHistory();
 
     const handleCancel = () => {
@@ -61,8 +61,8 @@ export default function Form({
                             name="people"
                             className="form-control"
                             id="people"
-                            placeholder={initialformData?.people || "Number of guests"}
-                            value={initialformData?.people}
+                            placeholder={initialFormData?.people || "Number of guests"}
+                            value={initialFormData?.people}
                             onChange={handleFormChange}
                             required
                             min="1" //must be at least 1 guest
@@ -73,8 +73,8 @@ export default function Form({
                         name="reservation_date"
                         className="form-control mb-1"
                         id="reservation_date"
-                        placeholder={initialformData?.reservation_date || "YYY-MM-DD"}
-                        value={initialformData?.reservation_date}
+                        placeholder={initialFormData?.reservation_date || "YYY-MM-DD"}
+                        value={initialFormData?.reservation_date}
                         onChange={handleFormChange}
                         required
                     />
@@ -83,8 +83,8 @@ export default function Form({
                         name="reservation_time"
                         className="form-control"
                         id="reservation_time"
-                        placeholder={initialformData?.reservation_time || "HH:MM"}
-                        value={initialformData?.reservation_time}
+                        placeholder={initialFormData?.reservation_time || "HH:MM"}
+                        value={initialFormData?.reservation_time}
                         onChange={handleFormChange}
                         required
                     />
