@@ -46,8 +46,8 @@ function Dashboard({ date }) {
 
   return (
     <main>
-      <h1>Dashboard</h1>
-      <div className="d-md-flex mb-3">
+      <h1 className="d-md-flex justify-content-left">Dashboard</h1>
+      <div className="d-md-flex mb-3 justify-content-left">
         <h4 className="mb-0">Reservations for {date}</h4>
         <button className="btn btn-primary mr-1" onClick={handleToday}>
           Today

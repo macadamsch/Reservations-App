@@ -41,6 +41,9 @@ function Routes() {
       <Route path="/dashboard">
         <Dashboard date={date || today()} />
       </Route>
+      <Route>
+        <Tables />
+      </Route>
       <Route path="/search">
         <Search />
       </Route>
