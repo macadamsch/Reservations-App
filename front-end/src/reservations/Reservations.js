@@ -3,11 +3,10 @@ import { useHistory } from "react-router-dom";
 import ErrorAlert from "../layout/ErrorAlert";
 import Form from "./Form";
 import { createReservation } from "../utils/api";
-import { isNotTuesday } from "../utils/date-time";
-import { isNotPast } from "../utils/date-time";
+import { isNotTuesday, isNotPast } from "../utils/date-time";
 
 export default function Reservations() {
-    const history = useHistory;
+    const history = useHistory();
     const [reservationsError, setReservationsError] = useState(null);
     const initialFormData = {
         first_name: "",

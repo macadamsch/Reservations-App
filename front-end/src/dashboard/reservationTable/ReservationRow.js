@@ -11,7 +11,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
 
     return (
         <tr>
-            <th scope="row">{reservation.reservation.id}</th>
+            <th scope="row">{reservation.reservation_id}</th>
             <td>{reservation.first_name}</td>
             <td>{reservation.last_name}</td>
             <td>{reservation.mobile_number}</td>
@@ -39,7 +39,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
             <td>
                 <button>
                 <a 
-                    className="btn btn-danger"
+                    className="btn btn-outline-danger"
                     data-reservation-id-cancel={reservation.reservation_id}
                     onClick={handleCancel}
                 >Cancel</a>

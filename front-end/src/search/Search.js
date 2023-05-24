@@ -30,13 +30,13 @@ export default function Search() {
     }
 
     return (
-        <>
+        <section>
             <div className="d-flex justify-content-center pt-3">
                 <h3>Search</h3>
             </div>
             <ErrorAlert error={error} />
             <div className="pt-3 pb-3">
-                <form onSubmit={searchHandler}>
+                <form className="form-group" onSubmit={searchHandler}>
                     <input
                         name="mobile_number"
                         id="mobile_number"
@@ -46,7 +46,7 @@ export default function Search() {
                         className="form-control"
                         required />
                     <div className="pt-2">
-                        <button type="submit">
+                        <button className="btn btn-primary" type="submit">
                             Find
                         </button>
                     </div>
@@ -64,6 +64,6 @@ export default function Search() {
                     )}
                 </div>
             )}
-        </>
+        </section>
     )
 }

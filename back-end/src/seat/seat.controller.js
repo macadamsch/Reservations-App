@@ -88,12 +88,12 @@ async function update(req, res, next) {
     const { reservation_id } = req.body.data;
     const { table_id } = req.params;
     await service.update(table_id, reservation_id);
-    res.status(200).json({ data: reservataion_id });
+    res.status(200).json({ data: reservation_id });
 }
 
 async function unassign(req, res, next) {
     const { table_id } = req.params;
-    const reservation = await reservationService.finish(res.locals.reservataion_id);
+    const reservation = await reservationService.finish(res.locals.reservation_id);
     const table = await service.update(table_id, null);
     res.json({ data: table });
 }
