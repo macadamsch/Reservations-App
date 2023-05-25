@@ -1,7 +1,5 @@
 # Reservations App
 
-This is the README file for my Thinkful Engineering Immersion Program capstone project.
-
 ## Live Site
 
 [https://reservations-app-frontend.onrender.com](https://reservations-app-frontend.onrender.com)
