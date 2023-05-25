@@ -9,35 +9,32 @@ const VALID_FIELDS = [
 function validateTable(req, res, next) {
     const table = req.body.data;
     if (!table) {
-        return next({
-            status: 400,
-            message: "Must have data property."
-        });
+      return next({ status: 400, message: "Must have data property" });
     }
-
+  
     VALID_FIELDS.forEach((field) => {
-        if (!table[field]) {
-            return next({
-                status: 400,
-                message: `Must have ${field} property.`
-            });
-        }
+      if (!table[field]) {
+        return next({ status: 400, message: `Must have ${field} property.` });
+      }
     });
+  
     if (typeof table["capacity"] !== "number") {
-        return next({
-            status: 400,
-            message: "Capacity must be a number greater than 0."
-        });
+      return next({
+        status: 400,
+        message: "capacity must be a number greater than 0",
+      });
     }
+  
     if (table["table_name"].length < 2) {
-        return next({
-            status: 400,
-            message: "table_name must be at least two characters long."
-        });
+      return next({
+        status: 400,
+        message: "table_name must be at least two characters long.",
+      });
     }
+  
     next();
-}
-
+  }
+    
 async function list(req, res, next) {
     const data = await service.list();
     res.json({ data });

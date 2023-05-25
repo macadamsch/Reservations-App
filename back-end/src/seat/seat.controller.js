@@ -13,11 +13,8 @@ function hasReservationId(req, res, next) {
         })
     }
     if (!table.reservation_id) {
-        return next({
-            status: 400,
-            mesasge: "Must have reservation_id"
-        })
-    }
+        return next({ status: 400, message: "Must have reservation_id" });
+      }
     next();
 };
 

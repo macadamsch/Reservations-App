@@ -193,7 +193,7 @@ async function modify(req, res, next) {
   const reservation = req.body.data;
   const data = await service.modify(reservation_Id, reservation);
   reservation.reservation_id = data.reservation_id;
-  res.json({ data: reeservation });
+  res.json({ data: reservation });
 }
 
 module.exports = {
