@@ -23,7 +23,7 @@ export default function FinishButton({ status, table, loadDashboard }){
                     data-table-id-finish={table.table_id}
                     type="button"
                     onClick={handleClick}
-                    className="btn btn-sm btn-primary">
+                    className="btn btn-sm btn-outline-primary">
                     Finish
                 </button>
             </td>

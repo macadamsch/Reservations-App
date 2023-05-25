@@ -23,7 +23,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
             <td>
                 {reservation.status === "booked" ? (
                     <a
-                        className="btn btn-secondary"
+                        className="btn btn-outline-primary"
                         role="button"
                         href={`/reservations/${reservation.reservation_id}/seat`}>
                     Seat</a>
@@ -31,19 +31,18 @@ export default function ReservationRow({ reservation, cancelRes }) {
             </td>
             <td>
                 <a 
-                    className="btn btn-secondary" 
+                    className="btn btn-outline-primary" 
                     role="button" 
                     href={`/reservations/${reservation.reservation_id}/edit`}
                 >Edit</a>
             </td>
             <td>
-                <button>
                 <a 
                     className="btn btn-outline-danger"
+                    role="button"
                     data-reservation-id-cancel={reservation.reservation_id}
                     onClick={handleCancel}
                 >Cancel</a>
-                </button>
             </td>
         </tr>
     );

@@ -78,10 +78,10 @@ export default function Seat() {
                             {options}
                     </select>
                 </label>
-                <button className="btn btn-primary mr-1" type="submit">
+                <button className="btn btn-outline-primary" type="submit">
                     Submit
                 </button>
-                <button className="btn btn-secondary" onClick={handleCancel}>
+                <button className="btn btn-outline-danger" onClick={handleCancel}>
                     Cancel
                 </button>
             </form>

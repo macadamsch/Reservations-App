@@ -39,8 +39,8 @@ export default function ReservationTable({
     })
 
     return (
-        <>
-        <table className="table table-sm table-striped table-bordered">
+        <div className="table-responsive">
+        <table className="table table-hover table-sm table-striped table-borderless">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -57,6 +57,6 @@ export default function ReservationTable({
             </thead>
             <tbody>{formatted}</tbody>
         </table>
-        </>
+        </div>
     );
 }

@@ -46,7 +46,7 @@ export default function Search() {
                         className="form-control"
                         required />
                     <div className="pt-2">
-                        <button className="btn btn-primary" type="submit">
+                        <button className="btn btn-outline-primary" type="submit">
                             Find
                         </button>
                     </div>

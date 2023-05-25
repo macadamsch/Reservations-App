@@ -65,10 +65,10 @@ export default function Tables() {
                     required
                 />
                 <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn btn-primary mr-1">
+                    <button type="submit" className="btn btn-outline-primary">
                         Submit
                     </button>
-                    <button type="button" className="btn btn-secondary" onClick={handleCancel}>
+                    <button type="button" className="btn btn-outline-danger" onClick={handleCancel}>
                         Cancel
                     </button>
                 </div>
