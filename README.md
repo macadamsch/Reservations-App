@@ -4,7 +4,7 @@ This is the README file for my Thinkful Engineering Immersion Program capstone p
 
 ## Live Site
 
-[https://reservations-app-pnzf.onrender.com](https://reservations-app-pnzf.onrender.com)
+[https://reservations-app-frontend.onrender.com](https://reservations-app-frontend.onrender.com)
 
 ## Screenshots
 ![image](https://github.com/macadamsch/Reservations-App/assets/121463395/b41b5a34-45da-4c39-91ca-cbd09d109eb6)
