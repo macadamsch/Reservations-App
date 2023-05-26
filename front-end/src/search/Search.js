@@ -40,8 +40,9 @@ export default function Search() {
                     <input
                         name="mobile_number"
                         id="mobile_number"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         onChange={changeHandler}
-                        placeholder="Enter a customer's phone number"
+                        placeholder="Enter a customer's phone number (###-###-####)"
                         value={mobile}
                         className="form-control"
                         required />

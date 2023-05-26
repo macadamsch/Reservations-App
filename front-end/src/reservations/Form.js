@@ -47,9 +47,10 @@ export default function Form({
                         <input //phone number
                             type="tel"
                             name="mobile_number"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             className="form-control"
                             id="mobile_number"
-                            placeholder={initialFormData?.mobile_number || "Mobile Number"}
+                            placeholder={initialFormData?.mobile_number || "Mobile Number (###-###-####)"}
                             value={initialFormData?.mobile_number}
                             onChange={handleFormChange}
                             required
